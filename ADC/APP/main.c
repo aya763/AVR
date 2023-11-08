@@ -76,8 +76,12 @@ int main()
 		{
 			if(flag==1)
 			{
-			LCD_enuDisplayNum(adc32);
-			flag=0;
+				LCD_enuDisplayString("Temperature=");
+				LCD_enuDisplayNum(adc32);
+				LCD_enuDisplayChar(0xDF);
+				LCD_enuDisplayChar('C');
+				flag=0;
+
 			}
 		}
 
